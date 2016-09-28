@@ -26,6 +26,8 @@
 {{/if}}
 
 <div id="classdocs">
+    <h2>Index</h2>
+
     <ul>
         {{#if methods}}
         <li><a href="#methods">Methods</a></li>
@@ -43,6 +45,7 @@
     <div>
         {{#if methods}}
             <div id="methods">
+            <h2>Methods</h2>
             {{#methods}}
                 {{>method}}
             {{/methods}}
@@ -50,6 +53,7 @@
         {{/if}}
         {{#if properties}}
             <div id="props">
+            <h2>Properties</h2>
             {{#properties}}
                 {{>props}}
             {{/properties}}
@@ -57,6 +61,7 @@
         {{/if}}
         {{#if attrs}}
             <div id="attrs">
+            <h2>Attributes</h2>
             {{#attrs}}
                 {{>attrs}}
             {{/attrs}}
@@ -64,6 +69,7 @@
         {{/if}}
         {{#if events}}
             <div id="events">
+            <h2>Events</h2>
             {{#events}}
                 {{>events}}
             {{/events}}

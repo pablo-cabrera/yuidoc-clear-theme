@@ -1,23 +1,25 @@
-<div id="modules" class="sidebox">
-    <div class="hd">
-        <h2 class="no-toc">Modules</h2>
+{{#if modules}}
+    <div id="modules" class="sidebox">
+        <div class="hd">
+            <h2 class="no-toc">Modules</h2>
+        </div>
+        <div class="bd">
+            <ul>
+                {{#modules}}
+                    <li><a href="{{../projectRoot}}modules/{{name}}.html">{{displayName}}</a>
+                    {{#if submodules}}
+                        <ul>
+                            {{#submodules}}
+                                <li><a href="{{../../../projectRoot}}modules/{{../name}}.html#{{displayName}}">{{displayName}}</a></li>
+                            {{/submodules}}
+                        </ul>
+                    {{/if}}
+                    </li>
+                {{/modules}}
+            </ul>
+        </div>
     </div>
-    <div class="bd">
-        <ul>
-            {{#modules}}
-                <li><a href="{{../projectRoot}}modules/{{name}}.html">{{displayName}}</a>
-                {{#if submodules}}
-                    <ul>
-                        {{#submodules}}
-                            <li><a href="{{../../../projectRoot}}modules/{{../name}}.html#{{displayName}}">{{displayName}}</a></li>
-                        {{/submodules}}
-                    </ul>
-                {{/if}}
-                </li>
-            {{/modules}}
-        </ul>
-    </div>
-</div>
+{{/if}}
 
 <div id="classes" class="sidebox">
     <div class="hd">
@@ -46,6 +48,22 @@
     </div>
 </div>
 {{/if}}
+
+{{#if properties}}
+<div id="properties-on-page" class="sidebox on-page">
+    <div class="hd">
+        <h2 class="no-toc">Properties On Page</h2>
+    </div>
+    <div class="bd">
+        <ul>
+            {{#properties}}
+                <li><a href="#props_{{name}}">{{name}}</a></li>
+            {{/properties}}
+        </ul>
+    </div>
+</div>
+{{/if}}
+
 
 {{#if events}}
 <div id="events-on-page" class="sidebox on-page">

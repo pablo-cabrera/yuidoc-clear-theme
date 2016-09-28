@@ -20,7 +20,7 @@ Here's a quick lookup table:
 
 html {
     background: #fff;
-    color: #333;
+    color: #000;
     overflow-y: scroll;
 }
 
@@ -32,12 +32,14 @@ body {
 
 /* -- Links ----------------------------------------------------------------- */
 a {
-    color: #444;
-    text-decoration: none;
+    text-decoration: underline;
+    color: #999;
 }
 
+
+
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: #000;
 }
 
